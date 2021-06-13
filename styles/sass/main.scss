@@ -71,9 +71,20 @@ body
 .main
 {
     background-color: $color-quaternary;
-    &__image
+    &__img-container
+    {
+        height: 240px;
+        overflow: hidden;
+        &__image
     {
         @include images;
+        &--note-enchantee
+        {
+
+            transform: translateY(-95px);
+        }
+    }
+    
     }
     &__section
     {
@@ -87,6 +98,10 @@ body
         @include text-style(heading);
         @include flex-center;
         justify-content: space-between;
+        &__checkbox
+        {
+            display: none;
+        }
     }
     &__h2
     {

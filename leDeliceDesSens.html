@@ -25,9 +25,17 @@
         </header>
         <!--FIN HEADER-->
         <main class="main">
-            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens" class="main__image">
+            <div class="main__img-container">
+                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens" class="main__img-container__image">
+            </div>
             <section class="main__section">
-                <h1 class="main__h1">Le délice des sens<i class="far fa-heart"></i></h1> 
+                <form class="main__h1">
+                    <h1>Le délice des sens</h1>
+                    <label for="heart">
+                        <i class="far fa-heart"></i>
+                        <input type="checkbox" name="heart" id="heart" class="main__h1__checkbox">
+                    </label> 
+                </form>
                 <form class="main__form">
                     <h2 class="main__h2">ENTRÉES</h2>
                     <div class="main__border"></div>

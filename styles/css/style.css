@@ -26,9 +26,16 @@ body {
 .main {
   background-color: #F2F2F2;
 }
-.main__image {
+.main__img-container {
+  height: 240px;
+  overflow: hidden;
+}
+.main__img-container__image {
   object-fit: cover;
   width: 100%;
+}
+.main__img-container__image--note-enchantee {
+  transform: translateY(-95px);
 }
 .main__section {
   background-color: #F2F2F2;
@@ -44,6 +51,9 @@ body {
   align-items: center;
   justify-content: center;
   justify-content: space-between;
+}
+.main__h1__checkbox {
+  display: none;
 }
 .main__h2 {
   padding-bottom: 5px;
