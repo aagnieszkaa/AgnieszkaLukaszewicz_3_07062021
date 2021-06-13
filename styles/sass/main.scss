@@ -1,20 +1,10 @@
-html
-{
-    font-size: 1rem;
-    box-sizing: border-box;
-}
-*
-{
-    box-sizing: inherit;
-}
-
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-quaternary: #F2F2F2;
 $font-style-heading: 'Shrikhand', cursive;
 $font-style-text: 'Roboto', sans-serif;
-$marg-pad-size: 7px 20px 0 5px;
+$marg-pad-size: 7px 20px 0 15px 5px;
 
 @mixin flex-center
 {
@@ -36,7 +26,7 @@ $text-style: (
     (
         font-fam: $font-style-heading,
         font-size: 1.5rem,
-        padding: nth($marg-pad-size, 2) nth($marg-pad-size, 3) nth($marg-pad-size, 2) nth($marg-pad-size, 3),
+        padding: nth($marg-pad-size, 2) nth($marg-pad-size, 3),
     ),
     text:
     ( 
@@ -49,19 +39,31 @@ $text-style: (
     font-size: map-get($style, font-size);
     padding: map-get($style, padding);
 }
-
-
+html
+{
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+body
+{
+    @include text-style(text);
+}
+*
+{
+    box-sizing: inherit;
+}
 .header
 {
     @include flex-center;
-    padding: nth($marg-pad-size, 1) nth($marg-pad-size, 3) nth($marg-pad-size, 1) nth($marg-pad-size, 3);
+    padding: nth($marg-pad-size, 1) nth($marg-pad-size, 3);
     &__arrow
     {
         transform: translateX(-40px);
         @include links;
     }
 }
-.main{
+.main
+{
     &__image
     {
         @include images;
@@ -71,11 +73,31 @@ $text-style: (
         background-color: $color-quaternary;
         transform: translateY(-40px);
         border-radius: nth($marg-pad-size, 2) nth($marg-pad-size, 2) nth($marg-pad-size, 3) nth($marg-pad-size, 3);
+        padding: nth($marg-pad-size, 4);
     }
     &__h1
     {
         @include text-style(heading);
         @include flex-center;
-        justify-content: space-around;
+        justify-content: space-between;
+    }
+    &__h2
+    {
+        padding-bottom: nth($marg-pad-size, 5);
+        
+    }
+    &__border
+    {
+        border-bottom: 3px solid $color-tertiary;
+        width: 40px;
+        margin-bottom: nth($marg-pad-size, 4);
+    }
+    &__form
+    {
+        &__choice
+        {
+            background-color: white;
+            margin: nth($marg-pad-size, 4) nth($marg-pad-size, 3);
+        }
     }
 }
