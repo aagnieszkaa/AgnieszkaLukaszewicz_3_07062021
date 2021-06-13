@@ -1,0 +1,81 @@
+html
+{
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+*
+{
+    box-sizing: inherit;
+}
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-quaternary: #F2F2F2;
+$font-style-heading: 'Shrikhand', cursive;
+$font-style-text: 'Roboto', sans-serif;
+$marg-pad-size: 7px 20px 0 5px;
+
+@mixin flex-center
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin links
+{
+    color: black;
+}
+@mixin images
+{
+    object-fit: cover;
+    width: 100%;
+}
+$text-style: (
+    heading:
+    (
+        font-fam: $font-style-heading,
+        font-size: 1.5rem,
+        padding: nth($marg-pad-size, 2) nth($marg-pad-size, 3) nth($marg-pad-size, 2) nth($marg-pad-size, 3),
+    ),
+    text:
+    ( 
+        font-fam: $font-style-text,
+    )
+);
+@mixin text-style($type){
+    $style: map-get($text-style, $type);
+    font-family: map-get($style, font-fam);
+    font-size: map-get($style, font-size);
+    padding: map-get($style, padding);
+}
+
+
+.header
+{
+    @include flex-center;
+    padding: nth($marg-pad-size, 1) nth($marg-pad-size, 3) nth($marg-pad-size, 1) nth($marg-pad-size, 3);
+    &__arrow
+    {
+        transform: translateX(-40px);
+        @include links;
+    }
+}
+.main{
+    &__image
+    {
+        @include images;
+    }
+    &__section
+    {
+        background-color: $color-quaternary;
+        transform: translateY(-40px);
+        border-radius: nth($marg-pad-size, 2) nth($marg-pad-size, 2) nth($marg-pad-size, 3) nth($marg-pad-size, 3);
+    }
+    &__h1
+    {
+        @include text-style(heading);
+        @include flex-center;
+        justify-content: space-around;
+    }
+}

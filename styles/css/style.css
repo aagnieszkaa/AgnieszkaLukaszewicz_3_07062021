@@ -1,3 +1,40 @@
+html {
+  font-size: 1rem;
+  box-sizing: border-box;
+}
 
+* {
+  box-sizing: inherit;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 0 7px 0;
+}
+.header__arrow {
+  transform: translateX(-40px);
+  color: black;
+}
+
+.main__image {
+  object-fit: cover;
+  width: 100%;
+}
+.main__section {
+  background-color: #F2F2F2;
+  transform: translateY(-40px);
+  border-radius: 20px 20px 0 0;
+}
+.main__h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5rem;
+  padding: 20px 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
 
 /*# sourceMappingURL=style.css.map */
