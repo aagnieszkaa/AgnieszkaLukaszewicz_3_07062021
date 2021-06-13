@@ -8,80 +8,145 @@
         <script src="https://kit.fontawesome.com/4be8471875.js" crossorigin="anonymous"></script>
         <!--Insertion du reset des styles par défaut-->
         <link rel="stylesheet" href="styles/css/reset.css">
+        <!--Insertion des polices-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!--Insertion de mon style css-->
+        <link rel="stylesheet" href="styles/css/style.css">
         <title>La palette du goût</title>
     </head>
     <body>
         <!--HEADER-->
-        <header>
-            <a href="index.html"><i class="fas fa-arrow-left"></i></a>
-            <img src="images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+        <header class="header">
+            <a href="index.html" class="header__arrow"><i class="fas fa-arrow-left"></i></a>
+            <img src="images/logo/ohmyfood@2x.svg" alt="logo ohmyfood" class="header__logo">
         </header>
         <!--FIN HEADER-->
-        <main>
-            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-            <h1>La palette du goût<i class="far fa-heart"></i></h1> 
-            <section>
-                <h2>Entrées</h2>
-                <div>
-                    <h2>Fricassée d'escargot</h2>
-                    <p>Au piment d'Espelette</p>
-                    <p>25€</p>
-                </div>
-                <div>
-                    <h2>Foie gras de canard mi-cuit</h2>
-                    <p>Et ses copeaux de truffe noire</p>
-                    <p>35€</p>
-                </div>
-                <div>
-                    <h2>Oeuf au plat</h2>
-                    <p>Assaisonné à la truffe sur lit de caviar</p>
-                    <p>20€</p>
-                </div>
-            </section>
-            <section>
-                <h2>Plats</h2>
-                <div>
-                    <h2>Filet de boeuf aux herbes</h2>
-                    <p>Accompagné de sa ribambelle de légumes</p>
-                    <p>40€</p>
-                </div>
-                <div>
-                    <h2>Parmentier de queue de boeuf</h2>
-                    <p>À la truffe noire sur sa purée de panais</p>
-                    <p>35€</p>
-                </div>
-                <div>
-                    <h2>Filet de turbot</h2>
-                    <p>Aux agrumes</p>
-                    <p>44€</p>
-                </div>
-            </section>
-            <section>
-                <h2>Desserts</h2>
-                <div>
-                    <h2>Paris-Brest</h2>
-                    <p>Revisité</p>
-                    <p>18€</p>
-                </div>
-                <div>
-                    <h2>Macaron au chocolat d'exception</h2>
-                    <p>Et glace à la vanille de Madagascar</p>
-                    <p>22€</p>
-                </div>
-                <div>
-                    <h2>Mousse au chocolat</h2>
-                    <p>Au piment d'Espelette et à la truffe noire</p>
-                    <p>23€</p>
-                </div>
+        <main class="main">
+            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" class="main__image">
+            <section class="main__section">
+                <h1 class="main__h1">La palette du goût<i class="far fa-heart"></i></h1> 
+                <form class="main__form">
+                    <h2 class="main__h2">ENTRÉES</h2>
+                    <div class="main__border"></div>
+                    <label for="fricasse">
+                        <div class="main__form__choice">
+                            <h2 class="main__form__choice__title main__form__choice__bold-child">Fricassée d'escargot</h2>
+                            <div class="main__form__choice__subtitle">
+                                <p>Au piment d'Espelette</p>
+                                <p class="main__form__choice__bold-child">25€</p>
+                            </div>
+                            <i class="fas fa-check-circle"></i>
+                            <input type="checkbox" name="fricasse" id="fricasse" class="main__form__checkbox">
+                        </div>
+                    </label>
+                    <label for="canard">
+                        <div class="main__form__choice">
+                            <h2 class="main__form__choice__title main__form__choice__bold-child">Foie gras de canard mi-cuit</h2>
+                            <div class="main__form__choice__subtitle">
+                                <p>Et ses copeaux de truffe noire</p>
+                                <p class="main__form__choice__bold-child">35€</p>
+                            </div>
+                            <i class="fas fa-check-circle"></i>
+                            <input type="checkbox" name="canard" id="canard" class="main__form__checkbox">
+                        </div>
+                    </label>
+                    <label for="oeuf">
+                        <div class="main__form__choice">
+                            <h2 class="main__form__choice__title main__form__choice__bold-child">Oeuf au plat</h2>
+                            <div class="main__form__choice__subtitle">
+                                <p>Assaisonné à la truffe sur lit de caviar</p>
+                                <p class="main__form__choice__bold-child">20€</p>
+                            </div>
+                            <i class="fas fa-check-circle"></i>
+                            <input type="checkbox" name="oeuf" id="oeuf" class="main__form__checkbox">
+                        </div>
+                    </label>
+                    <h2 class="main__h2">PLATS</h2>
+                    <div class="main__border"></div>
+                    <label for="filet">
+                        <div class="main__form__choice">
+                            <h2 class="main__form__choice__title main__form__choice__bold-child">Filet de boeuf aux herbes</h2>
+                            <div class="main__form__choice__subtitle">
+                                <p>Accompagné de sa ribambelle de légumes</p>
+                                <p class="main__form__choice__bold-child">40€</p>
+                            </div>
+                            <i class="fas fa-check-circle"></i>
+                            <input type="checkbox" name="filet" id="filet" class="main__form__checkbox">
+                        </div>
+                    </label>
+                    <label for="parmentier">
+                        <div class="main__form__choice">
+                            <h2 class="main__form__choice__title main__form__choice__bold-child">Parmentier de queue de boeuf</h2>
+                            <div class="main__form__choice__subtitle">
+                                <p>À la truffe noire sur sa purée de panais</p>
+                                <p class="main__form__choice__bold-child">35€</p>
+                            </div>
+                            <i class="fas fa-check-circle"></i>
+                            <input type="checkbox" name="parmentier" id="parmentier" class="main__form__checkbox">
+                        </div>
+                    </label>
+                    <label for="turbot">
+                        <div class="main__form__choice">
+                            <h2 class="main__form__choice__title main__form__choice__bold-child">Filet de turbot</h2>
+                            <div class="main__form__choice__subtitle">
+                                <p>Aux agrumes</p>
+                                <p class="main__form__choice__bold-child">44€</p>
+                            </div>
+                            <i class="fas fa-check-circle"></i>
+                            <input type="checkbox" name="turbot" id="turbot" class="main__form__checkbox">
+                        </div>
+                    </label>
+                    <h2 class="main__h2">DESSERTS</h2>
+                    <div class="main__border"></div>
+                    <label for="paris">
+                        <div class="main__form__choice">
+                            <h2 class="main__form__choice__title main__form__choice__bold-child">Paris-Brest</h2>
+                            <div class="main__form__choice__subtitle">
+                                <p>Revisité</p>
+                                <p class="main__form__choice__bold-child">18€</p>
+                            </div>
+                            <i class="fas fa-check-circle"></i>
+                            <input type="checkbox" name="paris" id="paris" class="main__form__checkbox">
+                        </div>
+                    </label>
+                    <label for="chocolat">
+                        <div class="main__form__choice">
+                            <h2 class="main__form__choice__title main__form__choice__bold-child">Macaron au chocolat d'exception</h2>
+                            <div class="main__form__choice__subtitle">
+                                <p>Et glace à la vanille de Madagascar</p>
+                                <p class="main__form__choice__bold-child">22€</p>
+                            </div>
+                            <i class="fas fa-check-circle"></i>
+                            <input type="checkbox" name="chocolat" id="chocolat" class="main__form__checkbox">
+                        </div>
+                    </label>
+                    <label for="mousse">
+                        <div class="main__form__choice">
+                            <h2 class="main__form__choice__bold-child">Mousse au chocolat</h2>
+                            <div class="main__form__choice__subtitle">
+                                <p>Au piment d'Espelette et à la truffe noire</p>
+                                <p class="main__form__choice__title main__form__choice__bold-child">23€</p>
+                            </div>
+                            <i class="fas fa-check-circle"></i>
+                            <input type="checkbox" name="mousse" id="mousse" class="main__form__checkbox">
+                        </div>
+                    </label>
+                    <input type="submit" value="Commander" class="main__form__btn">
+                </form>
             </section>
         </main>
         <!--FOOTER-->
-        <footer>
-            <img src="images/logo/ohmyfood@2x--white.svg" alt="logo ohmyfood white">
-            <a href=""><i class="fas fa-utensils"></i>Proposez un restaurant</a>
-            <a href=""><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
-            <a href="">Mentions légales</a>
-            <a href="mailto:a.lukaszewicz@outlook.com">Contact</a>
+        <footer class="footer">
+            <img src="images/logo/ohmyfood@2x--white.svg" alt="logo ohmyfood white" class="footer__logo">
+            <ul>
+                <li class="footer__li"><a href="" class="footer__li__link"><i class="fas fa-utensils footer__li__link__icon"></i>Proposez un restaurant</a></li>
+                <li class="footer__li"><a href="" class="footer__li__link"><i class="fas fa-hands-helping footer__li__link__icon"></i>Devenir partenaire</a></li>
+                <li class="footer__li"><a href="" class="footer__li__link">Mentions légales</a></li>
+                <li class="footer__li"><a href="mailto:a.lukaszewicz@outlook.com" class="footer__li__link">Contact</a></li>
+            </ul>
         </footer>
         <!--FIN FOOTER-->
     </body>

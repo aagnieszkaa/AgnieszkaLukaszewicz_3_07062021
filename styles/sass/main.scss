@@ -4,7 +4,7 @@ $color-tertiary: #99E2D0;
 $color-quaternary: #F2F2F2;
 $font-style-heading: 'Shrikhand', cursive;
 $font-style-text: 'Roboto', sans-serif;
-$marg-pad-size: 7px 20px 0 15px 5px;
+$marg-pad-size: 7px 20px 0 15px 5px 12px 40px;
 
 @mixin flex-center
 {
@@ -12,9 +12,10 @@ $marg-pad-size: 7px 20px 0 15px 5px;
     align-items: center;
     justify-content: center;
 }
-@mixin links
+@mixin links($color: black)
 {
-    color: black;
+    color: $color;
+    text-decoration: none;
 }
 @mixin images
 {
@@ -31,6 +32,10 @@ $text-style: (
     text:
     ( 
         font-fam: $font-style-text,
+    ),
+    bold:
+    (
+        font-weight: bold,
     )
 );
 @mixin text-style($type){
@@ -38,6 +43,7 @@ $text-style: (
     font-family: map-get($style, font-fam);
     font-size: map-get($style, font-size);
     padding: map-get($style, padding);
+    font-weight: map-get($style, font-weight);
 }
 html
 {
@@ -64,6 +70,7 @@ body
 }
 .main
 {
+    background-color: $color-quaternary;
     &__image
     {
         @include images;
@@ -98,6 +105,59 @@ body
         {
             background-color: white;
             margin: nth($marg-pad-size, 4) nth($marg-pad-size, 3);
+            padding: nth($marg-pad-size, 4);
+            border-radius: nth($marg-pad-size, 4);
+            &__title
+            {
+                margin-bottom: nth($marg-pad-size, 5);
+            }
+            &__subtitle
+            {
+                @include flex-center;
+                justify-content: space-between;
+            }
+            &__bold-child
+            {
+                @include text-style(bold);
+            }
+        }
+        &__checkbox, .fa-check-circle
+        {
+            display: none;
+        }
+        &__btn
+        {
+            display: block;
+            margin: auto;
+            color: white;
+            background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+            padding: nth($marg-pad-size, 6) nth($marg-pad-size, 3);
+            margin-top: nth($marg-pad-size, 7);
+            border-radius: nth($marg-pad-size, 2);
+            border: none;
+            width: 150px;
+        }
+    }   
+}
+.footer
+    {
+        background-color: #22262A;
+        padding: nth($marg-pad-size, 4);
+        &__logo
+        {
+            padding: nth($marg-pad-size, 4);
+            width: 150px;
+        }
+        &__li
+        {
+            padding: nth($marg-pad-size, 5) nth($marg-pad-size, 4);
+            &__link
+            {
+                @include links(white);
+                &__icon
+                {
+                    margin-right: nth($marg-pad-size, 1);
+                }
+            }
         }
     }
-}
