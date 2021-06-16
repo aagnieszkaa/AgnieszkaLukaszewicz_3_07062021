@@ -45,12 +45,20 @@ $text-style: (
     padding: map-get($style, padding);
     font-weight: map-get($style, font-weight);
 }
+@mixin btn 
+{
+    color: white;
+    background: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
+    padding: nth($marg-pad-size, 6) nth($marg-pad-size, 3);
+    border-radius: nth($marg-pad-size, 2);
+    border: none;
+}
 html
 {
     font-size: 1rem;
     box-sizing: border-box;
 }
-body
+body, input
 {
     @include text-style(text);
 }
@@ -144,12 +152,8 @@ body
         {
             display: block;
             margin: auto;
-            color: white;
-            background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-            padding: nth($marg-pad-size, 6) nth($marg-pad-size, 3);
             margin-top: nth($marg-pad-size, 7);
-            border-radius: nth($marg-pad-size, 2);
-            border: none;
+            @include btn;
             width: 150px;
         }
     }   
@@ -172,6 +176,114 @@ body
                 &__icon
                 {
                     margin-right: nth($marg-pad-size, 1);
+                }
+            }
+        }
+    }
+    .main--accueil
+    {
+        &__section1
+        {
+            &__form
+            {
+                background-color: darken($color-quaternary, 5%);
+                padding: nth($marg-pad-size, 4) nth($marg-pad-size, 3);
+                @include flex-center;
+                align-items: baseline;
+                &__icon
+                {
+                    transform: translateX(34px);
+                    color: darken($color-quaternary, 75%);
+                }
+                &__input
+                {
+                    border: none;
+                    background-color: darken($color-quaternary, 5%);
+                    text-align: center;
+                    font-size: 1em;
+                    
+                }
+            }
+            &__top
+                {
+                    background-color: $color-quaternary;
+                    @include flex-center;
+                    flex-direction: column;
+                    text-align: center;
+                    padding: nth($marg-pad-size, 2) nth($marg-pad-size, 7);
+                    &__h1
+                    {
+                        @include text-style(bold);
+                        font-size: 1.5em;
+                        margin: nth($marg-pad-size, 6) nth($marg-pad-size, 3);
+                    }
+                    &__h2
+                    {
+                        color: darken($color-quaternary, 65%);
+                        margin: nth($marg-pad-size, 6) nth($marg-pad-size, 3);
+                    }
+                    &__btn
+                    {
+                        margin: nth($marg-pad-size, 6) nth($marg-pad-size, 3);
+                        &__link
+                        {
+                            @include links;
+                            display: block;
+                            @include btn;
+                            width: 200px;
+                        }
+                    }
+                }
+        }
+        &__section2
+        {
+            margin: nth($marg-pad-size, 2);
+            &__h2
+            {
+                font-size: 1.5em;
+                @include text-style(bold);
+                margin: nth($marg-pad-size, 2) nth($marg-pad-size, 3) nth($marg-pad-size, 6) nth($marg-pad-size, 3);
+            }
+            &__div
+            {
+                @include flex-center;
+                flex-direction: column;
+                &__link
+                {
+                    display: block;
+                    @include flex-center;
+                    background-color: $color-quaternary;
+                    @include links;
+                    width: 300px;
+                    padding: nth($marg-pad-size, 2);
+                    margin: 10px nth($marg-pad-size, 3);
+                    border-radius: nth($marg-pad-size, 2);
+                    position: relative;
+                    box-shadow: 0 3px 9px 0 #d9d9d9;
+                    @include text-style(bold);
+                    & p, &__icon, & div
+                    {
+                        margin: nth($marg-pad-size, 3) 10px;
+                    }
+                    & div
+                    {
+                        position: absolute;
+                        border-radius: 50px; 
+                        background-color: $color-primary;
+                        color: white;
+                        padding: 5px 8px;
+                        left: -17px;
+                    }
+                    &__icon
+                    {
+                        color: darken($color-quaternary, 60%);
+                        position: absolute;
+                        left: 25px;
+                    }
+                    &__icon--violet
+                    {
+                        color: $color-primary;
+                    }
                 }
             }
         }

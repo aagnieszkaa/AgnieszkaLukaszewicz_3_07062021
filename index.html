@@ -8,32 +8,43 @@
         <script src="https://kit.fontawesome.com/4be8471875.js" crossorigin="anonymous"></script>
         <!--Insertion du reset des styles par défaut-->
         <link rel="stylesheet" href="styles/css/reset.css">
+        <!--Insertion des polices-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!--Insertion de mon style css-->
+        <link rel="stylesheet" href="styles/css/style.css">
         <title>Accueil</title>
     </head>
     <body>
         <!--HEADER-->
-        <header>
-            <img src="images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+        <header class="header">
+            <img src="images/logo/ohmyfood@2x.svg" alt="logo ohmyfood" class="header__logo">
         </header>
         <!--FIN HEADER-->
-        <main>
+        <main class="main--accueil">
         <!--SECTION 1-->
-            <section>
-                <p>
-                    <i class="fas fa-map-marker-alt"></i>
-                    <input type="text" value="Paris, Belleville">
-                </p>
-                <h1>Réservez le menu qui vous convient</h1>
-                <h2>Découvrez des restaurants d'exception, séléctionnés par nos soins.</h2>
-                <p><a href="">Explorez nos restaurants</a></p>
-            </section>
+            <div class="main--accueil__section1">
+                <form class="main--accueil__section1__form">
+                    <i class="fas fa-map-marker-alt main--accueil__section1__form__icon"></i>
+                    <input type="text" value="Paris, Belleville" class="main--accueil__section1__form__input">
+                </form>
+                <section class="main--accueil__section1__top">
+                    <h1 class="main--accueil__section1__top__h1">Réservez le menu qui vous convient</h1>
+                    <h2 class="main--accueil__section1__top__h2">Découvrez des restaurants d'exception, séléctionnés par nos soins.</h2>
+                    <p class="main--accueil__section1__top__btn"><a href="" class="main--accueil__section1__top__btn__link">Explorez nos restaurants</a></p>
+                </section>
+            </div>
             <!--FIN SECTION 1-->
             <!--SECTION 2-->
-            <section>
-                <h2>Fonctionnement</h2>
-                <p><a href=""><i class="fas fa-mobile-alt"></i>Choissisez un restaurant</a></p>
-                <p><a href=""><i class="fas fa-list-ul"></i>Composez votre menu</a></p>
-                <p><a href=""><i class="fas fa-store"></i>Dégustez au restaurant</a></p>
+            <section class="main--accueil__section2">
+                <h2 class="main--accueil__section2__h2">Fonctionnement</h2>
+                <div class="main--accueil__section2__div">
+                    <a class="main--accueil__section2__div__link" href=""><div>1</div><i class="fas fa-mobile-alt main--accueil__section2__div__link__icon"></i><p>Choissisez un restaurant</p></a>
+                    <a class="main--accueil__section2__div__link" href=""><div>2</div><i class="fas fa-list-ul main--accueil__section2__div__link__icon"></i><p>Composez votre menu</p></a>
+                    <a class="main--accueil__section2__div__link" href=""><div>3</div><i class="fas fa-store main--accueil__section2__div__link__icon main--accueil__section2__div__link__icon--violet"></i><p>Dégustez au restaurant</p></a>
+                </div>
             </section>
             <!--FIN SECTION 2-->
             <!--SECTION 3-->
@@ -83,12 +94,14 @@
         <!--FIN SECTION 3-->
         </main>
         <!--FOOTER-->
-        <footer>
-            <img src="images/logo/ohmyfood@2x--white.svg" alt="logo ohmyfood white">
-            <a href=""><i class="fas fa-utensils"></i>Proposez un restaurant</a>
-            <a href=""><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
-            <a href="">Mentions légales</a>
-            <a href="mailto:a.lukaszewicz@outlook.com">Contact</a>
+        <footer class="footer">
+            <img src="images/logo/ohmyfood@2x--white.svg" alt="logo ohmyfood white" class="footer__logo">
+            <ul>
+                <li class="footer__li"><a href="" class="footer__li__link"><i class="fas fa-utensils footer__li__link__icon"></i>Proposez un restaurant</a></li>
+                <li class="footer__li"><a href="" class="footer__li__link"><i class="fas fa-hands-helping footer__li__link__icon"></i>Devenir partenaire</a></li>
+                <li class="footer__li"><a href="" class="footer__li__link">Mentions légales</a></li>
+                <li class="footer__li"><a href="mailto:a.lukaszewicz@outlook.com" class="footer__li__link">Contact</a></li>
+            </ul>
         </footer>
         <!--FIN FOOTER-->
     </body>
