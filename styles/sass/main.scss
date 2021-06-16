@@ -287,4 +287,66 @@ body, input
                 }
             }
         }
+        &__section3
+        {
+            background-color: $color-quaternary;
+            padding-bottom: 15px;
+            &__h2
+            {
+                font-size: 1.5em;
+                @include text-style(bold);
+                padding: 40px 0 10px 20px;
+            }
+            &__card
+            {
+                display: block;
+                width: 90%;
+                border-radius: nth($marg-pad-size, 2);
+                @include links;
+                text-align: center;
+                height: 250px;
+                background-color: white;
+                margin: 15px auto auto auto;
+                
+                &__img-container
+                {
+                    height: calc(100% - 70px);
+                    overflow: hidden;
+                    border-radius: nth($marg-pad-size, 2) nth($marg-pad-size, 2) 0 0;
+                    &__image
+                    {
+                        @include images;
+                        
+                    }
+                }
+                &__txt-container
+                {
+                    @include flex-center;
+                    justify-content: space-between;
+                    text-align: start;
+                    height: 70px;
+                    padding: 10px 0;
+                   &__txt h3
+                   {
+                       @include text-style(bold);
+                       font-size: 1.2em;
+                   }
+                   &__txt h3, &__txt p, &__icon
+                   {
+                       margin: 10px;
+                       
+                   }
+                   &__icon
+                   {
+                       align-self: flex-start;
+                       font-size: 1.6em;
+                   }
+                   &__icon input 
+                   {
+                       display: none;
+                   }
+                }
+            }
+        }
     }
+   

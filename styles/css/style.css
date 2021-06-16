@@ -214,5 +214,57 @@ body, input {
 .main--accueil__section2__div__link__icon--violet {
   color: #9356DC;
 }
+.main--accueil__section3 {
+  background-color: #F2F2F2;
+  padding-bottom: 15px;
+}
+.main--accueil__section3__h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 40px 0 10px 20px;
+}
+.main--accueil__section3__card {
+  display: block;
+  width: 90%;
+  border-radius: 20px;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  height: 250px;
+  background-color: white;
+  margin: 15px auto auto auto;
+}
+.main--accueil__section3__card__img-container {
+  height: calc(100% - 70px);
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+.main--accueil__section3__card__img-container__image {
+  object-fit: cover;
+  width: 100%;
+}
+.main--accueil__section3__card__txt-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  text-align: start;
+  height: 70px;
+  padding: 10px 0;
+}
+.main--accueil__section3__card__txt-container__txt h3 {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.main--accueil__section3__card__txt-container__txt h3, .main--accueil__section3__card__txt-container__txt p, .main--accueil__section3__card__txt-container__icon {
+  margin: 10px;
+}
+.main--accueil__section3__card__txt-container__icon {
+  align-self: flex-start;
+  font-size: 1.6em;
+}
+.main--accueil__section3__card__txt-container__icon input {
+  display: none;
+}
 
 /*# sourceMappingURL=style.css.map */
