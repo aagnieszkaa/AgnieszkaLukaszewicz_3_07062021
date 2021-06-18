@@ -160,7 +160,7 @@ body, input
 }
 .footer
     {
-        background-color: #22262A;
+        background-color: #353535;
         padding: nth($marg-pad-size, 4);
         &__logo
         {
@@ -190,6 +190,8 @@ body, input
                 padding: nth($marg-pad-size, 4) nth($marg-pad-size, 3);
                 @include flex-center;
                 align-items: baseline;
+                border-top: 5px solid transparent;
+                border-image: linear-gradient(#d2d2d2, darken($color-quaternary, 5%)) 60;
                 &__icon
                 {
                     transform: translateX(34px);
@@ -260,7 +262,7 @@ body, input
                     border-radius: nth($marg-pad-size, 2);
                     position: relative;
                     box-shadow: 0 3px 9px 0 #d9d9d9;
-                    @include text-style(bold);
+                    font-weight: 500;
                     & p, &__icon, & div
                     {
                         margin: nth($marg-pad-size, 3) 10px;
@@ -299,7 +301,6 @@ body, input
             }
             &__card
             {
-                display: block;
                 width: 90%;
                 border-radius: nth($marg-pad-size, 2);
                 @include links;
@@ -310,13 +311,25 @@ body, input
                 
                 &__img-container
                 {
+                    display: block;
                     height: calc(100% - 70px);
                     overflow: hidden;
                     border-radius: nth($marg-pad-size, 2) nth($marg-pad-size, 2) 0 0;
+                    position: relative;
                     &__image
                     {
                         @include images;
-                        
+                    }
+                    &__nouveau
+                    {
+                        background-color: #99e2d0;
+                        color: #0a8d6d;
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        padding: 7px;
+                        border-radius: 3px;
+                        font-weight: 500;
                     }
                 }
                 &__txt-container
@@ -326,6 +339,10 @@ body, input
                     text-align: start;
                     height: 70px;
                     padding: 10px 0;
+                    &__txt
+                    {
+                        @include links;
+                    }
                    &__txt h3
                    {
                        @include text-style(bold);
