@@ -1,0 +1,82 @@
+.main
+{
+    background-color: $color-quaternary;
+    &__img-container
+    {
+        height: 240px;
+        overflow: hidden;
+        &__image
+    {
+        @include images;
+        &--note-enchantee
+        {
+
+            transform: translateY(-95px);
+        }
+    }
+    
+    }
+    &__section
+    {
+        background-color: $color-quaternary;
+        transform: translateY(-40px);
+        border-radius: nth($marg-pad-size, 2) nth($marg-pad-size, 2) nth($marg-pad-size, 3) nth($marg-pad-size, 3);
+        padding: nth($marg-pad-size, 4);
+    }
+    &__h1
+    {
+        @include text-style(heading);
+        @include flex-center;
+        justify-content: space-between;
+        &__checkbox
+        {
+            display: none;
+        }
+    }
+    &__h2
+    {
+        padding-bottom: nth($marg-pad-size, 5);
+        
+    }
+    &__border
+    {
+        border-bottom: 3px solid $color-tertiary;
+        width: 40px;
+        margin-bottom: nth($marg-pad-size, 4);
+    }
+    &__form
+    {
+        &__choice
+        {
+            background-color: white;
+            margin: nth($marg-pad-size, 4) nth($marg-pad-size, 3);
+            padding: nth($marg-pad-size, 4);
+            border-radius: nth($marg-pad-size, 4);
+            &__title
+            {
+                margin-bottom: nth($marg-pad-size, 5);
+            }
+            &__subtitle
+            {
+                @include flex-center;
+                justify-content: space-between;
+            }
+            &__bold-child
+            {
+                @include text-style(bold);
+            }
+        }
+        &__checkbox, .fa-check-circle
+        {
+            display: none;
+        }
+        &__btn
+        {
+            display: block;
+            margin: auto;
+            margin-top: nth($marg-pad-size, 7);
+            @include btn;
+            width: 150px;
+        }
+    }   
+}

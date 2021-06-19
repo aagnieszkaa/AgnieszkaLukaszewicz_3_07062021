@@ -1,0 +1,10 @@
+.header
+{
+    @include flex-center;
+    padding: nth($marg-pad-size, 1) nth($marg-pad-size, 3);
+    &__arrow
+    {
+        transform: translateX(-40px);
+        @include links;
+    }
+}

@@ -23,6 +23,25 @@ body, input {
   text-decoration: none;
 }
 
+.footer {
+  background-color: #353535;
+  padding: 15px;
+}
+.footer__logo {
+  padding: 15px;
+  width: 150px;
+}
+.footer__li {
+  padding: 5px 15px;
+}
+.footer__li__link {
+  color: white;
+  text-decoration: none;
+}
+.footer__li__link__icon {
+  margin-right: 7px;
+}
+
 .main {
   background-color: #F2F2F2;
 }
@@ -94,25 +113,6 @@ body, input {
   border-radius: 20px;
   border: none;
   width: 150px;
-}
-
-.footer {
-  background-color: #353535;
-  padding: 15px;
-}
-.footer__logo {
-  padding: 15px;
-  width: 150px;
-}
-.footer__li {
-  padding: 5px 15px;
-}
-.footer__li__link {
-  color: white;
-  text-decoration: none;
-}
-.footer__li__link__icon {
-  margin-right: 7px;
 }
 
 .main--accueil__section1__form {

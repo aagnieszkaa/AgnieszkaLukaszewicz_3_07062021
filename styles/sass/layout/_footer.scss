@@ -1,0 +1,22 @@
+.footer
+    {
+        background-color: #353535;
+        padding: nth($marg-pad-size, 4);
+        &__logo
+        {
+            padding: nth($marg-pad-size, 4);
+            width: 150px;
+        }
+        &__li
+        {
+            padding: nth($marg-pad-size, 5) nth($marg-pad-size, 4);
+            &__link
+            {
+                @include links(white);
+                &__icon
+                {
+                    margin-right: nth($marg-pad-size, 1);
+                }
+            }
+        }
+    }

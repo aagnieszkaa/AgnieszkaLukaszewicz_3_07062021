@@ -1,15 +1,13 @@
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
+html
+{
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+body, input
+{
+    @include text-style(text);
+}
+*
+{
     box-sizing: inherit;
-}
-
-html {
-    
-}
-
-body {
-    
 }

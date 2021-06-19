@@ -1,0 +1,186 @@
+.main--accueil
+    {
+        &__section1
+        {
+            &__form
+            {
+                background-color: darken($color-quaternary, 5%);
+                padding: nth($marg-pad-size, 4) nth($marg-pad-size, 3);
+                @include flex-center;
+                align-items: baseline;
+                border-top: 5px solid transparent;
+                border-image: linear-gradient(#d2d2d2, darken($color-quaternary, 5%)) 60;
+                &__icon
+                {
+                    transform: translateX(34px);
+                    color: darken($color-quaternary, 75%);
+                }
+                &__input
+                {
+                    border: none;
+                    background-color: darken($color-quaternary, 5%);
+                    text-align: center;
+                    font-size: 1em;
+                    
+                }
+            }
+            &__top
+                {
+                    background-color: $color-quaternary;
+                    @include flex-center;
+                    flex-direction: column;
+                    text-align: center;
+                    padding: nth($marg-pad-size, 2) nth($marg-pad-size, 7);
+                    &__h1
+                    {
+                        @include text-style(bold);
+                        font-size: 1.5em;
+                        margin: nth($marg-pad-size, 6) nth($marg-pad-size, 3);
+                    }
+                    &__h2
+                    {
+                        color: darken($color-quaternary, 65%);
+                        margin: nth($marg-pad-size, 6) nth($marg-pad-size, 3);
+                    }
+                    &__btn
+                    {
+                        margin: nth($marg-pad-size, 6) nth($marg-pad-size, 3);
+                        &__link
+                        {
+                            @include links;
+                            display: block;
+                            @include btn;
+                            width: 200px;
+                        }
+                    }
+                }
+        }
+        &__section2
+        {
+            margin: nth($marg-pad-size, 2);
+            &__h2
+            {
+                font-size: 1.5em;
+                @include text-style(bold);
+                margin: nth($marg-pad-size, 2) nth($marg-pad-size, 3) nth($marg-pad-size, 6) nth($marg-pad-size, 3);
+            }
+            &__div
+            {
+                @include flex-center;
+                flex-direction: column;
+                &__link
+                {
+                    display: block;
+                    @include flex-center;
+                    background-color: $color-quaternary;
+                    @include links;
+                    width: 300px;
+                    padding: nth($marg-pad-size, 2);
+                    margin: 10px nth($marg-pad-size, 3);
+                    border-radius: nth($marg-pad-size, 2);
+                    position: relative;
+                    box-shadow: 0 3px 9px 0 #d9d9d9;
+                    font-weight: 500;
+                    & p, &__icon, & div
+                    {
+                        margin: nth($marg-pad-size, 3) 10px;
+                    }
+                    & div
+                    {
+                        position: absolute;
+                        border-radius: 50px; 
+                        background-color: $color-primary;
+                        color: white;
+                        padding: 5px 8px;
+                        left: -17px;
+                    }
+                    &__icon
+                    {
+                        color: darken($color-quaternary, 60%);
+                        position: absolute;
+                        left: 25px;
+                    }
+                    &__icon--violet
+                    {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+        &__section3
+        {
+            background-color: $color-quaternary;
+            padding-bottom: 15px;
+            &__h2
+            {
+                font-size: 1.5em;
+                @include text-style(bold);
+                padding: 40px 0 10px 20px;
+            }
+            &__card
+            {
+                width: 90%;
+                border-radius: nth($marg-pad-size, 2);
+                @include links;
+                text-align: center;
+                height: 250px;
+                background-color: white;
+                margin: 15px auto auto auto;
+                
+                &__img-container
+                {
+                    display: block;
+                    height: calc(100% - 70px);
+                    overflow: hidden;
+                    border-radius: nth($marg-pad-size, 2) nth($marg-pad-size, 2) 0 0;
+                    position: relative;
+                    &__image
+                    {
+                        @include images;
+                    }
+                    &__nouveau
+                    {
+                        background-color: #99e2d0;
+                        color: #0a8d6d;
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        padding: 7px;
+                        border-radius: 3px;
+                        font-weight: 500;
+                    }
+                }
+                &__txt-container
+                {
+                    @include flex-center;
+                    justify-content: space-between;
+                    text-align: start;
+                    height: 70px;
+                    padding: 10px 0;
+                    &__txt
+                    {
+                        @include links;
+                    }
+                   &__txt h3
+                   {
+                       @include text-style(bold);
+                       font-size: 1.2em;
+                   }
+                   &__txt h3, &__txt p, &__icon
+                   {
+                       margin: 10px;
+                       
+                   }
+                   &__icon
+                   {
+                       align-self: flex-start;
+                       font-size: 1.6em;
+                   }
+                   &__icon input 
+                   {
+                       display: none;
+                   }
+                }
+            }
+        }
+    }

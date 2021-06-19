@@ -1,0 +1,47 @@
+@mixin flex-center
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin links($color: black)
+{
+    color: $color;
+    text-decoration: none;
+}
+@mixin images
+{
+    object-fit: cover;
+    width: 100%;
+}
+$text-style: (
+    heading:
+    (
+        font-fam: $font-style-heading,
+        font-size: 1.5rem,
+        padding: nth($marg-pad-size, 2) nth($marg-pad-size, 3),
+    ),
+    text:
+    ( 
+        font-fam: $font-style-text,
+    ),
+    bold:
+    (
+        font-weight: bold,
+    )
+);
+@mixin text-style($type){
+    $style: map-get($text-style, $type);
+    font-family: map-get($style, font-fam);
+    font-size: map-get($style, font-size);
+    padding: map-get($style, padding);
+    font-weight: map-get($style, font-weight);
+}
+@mixin btn 
+{
+    color: white;
+    background: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
+    padding: nth($marg-pad-size, 6) nth($marg-pad-size, 3);
+    border-radius: nth($marg-pad-size, 2);
+    border: none;
+}
