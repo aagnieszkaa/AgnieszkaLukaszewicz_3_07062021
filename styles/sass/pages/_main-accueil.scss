@@ -42,17 +42,6 @@
                         color: darken($color-quaternary, 65%);
                         margin: nth($marg-pad-size, 6) nth($marg-pad-size, 3);
                     }
-                    &__btn
-                    {
-                        margin: nth($marg-pad-size, 6) nth($marg-pad-size, 3);
-                        &__link
-                        {
-                            @include links;
-                            display: block;
-                            @include btn;
-                            width: 200px;
-                        }
-                    }
                 }
         }
         &__section2
@@ -79,7 +68,7 @@
                     margin: 10px nth($marg-pad-size, 3);
                     border-radius: nth($marg-pad-size, 2);
                     position: relative;
-                    box-shadow: 0 3px 9px 0 #d9d9d9;
+                    @include shadow(lighter);
                     font-weight: 500;
                     & p, &__icon, & div
                     {
@@ -126,7 +115,7 @@
                 height: 250px;
                 background-color: white;
                 margin: 15px auto auto auto;
-                
+                @include shadow(lighter);
                 &__img-container
                 {
                     display: block;
@@ -168,8 +157,7 @@
                    }
                    &__txt h3, &__txt p, &__icon
                    {
-                       margin: 10px;
-                       
+                       margin: 10px;  
                    }
                    &__icon
                    {

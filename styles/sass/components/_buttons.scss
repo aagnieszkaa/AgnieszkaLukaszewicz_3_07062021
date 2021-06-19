@@ -1,0 +1,32 @@
+.main__form__btn
+{
+
+    display: block;
+    margin: auto;
+    margin-top: nth($marg-pad-size, 7);
+    @include btn;
+    width: 150px;
+    &:active
+        {
+            @include btn-hover;
+        }
+}
+.main--accueil__section1__top
+{
+    &__btn
+    {
+        margin: nth($marg-pad-size, 6) nth($marg-pad-size, 3);
+        &__link
+        {
+            @include links;
+            display: block;
+            @include btn;
+            width: 200px;
+            &:active
+            {
+                @include btn-hover;
+            }
+        }
+        
+    }
+}

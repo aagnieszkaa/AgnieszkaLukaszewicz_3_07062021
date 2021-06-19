@@ -1,0 +1,19 @@
+.fa-heart
+{
+    position: relative;
+}
+#heart:checked + .fa-heart, 
+#heart1:checked + .fa-heart, 
+#heart2:checked + .fa-heart, 
+#heart3:checked + .fa-heart, 
+#heart4:checked + .fa-heart, 
+#heart5:checked + .fa-heart,
+#heart6:checked + .fa-heart,
+#heart7:checked + .fa-heart
+{
+    background: $heart-color;
+	background-clip: text;
+    color: transparent;
+    transition: color 1s;
+    font-weight: bold;
+}

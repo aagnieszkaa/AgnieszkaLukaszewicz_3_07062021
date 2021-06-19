@@ -14,22 +14,7 @@
     object-fit: cover;
     width: 100%;
 }
-$text-style: (
-    heading:
-    (
-        font-fam: $font-style-heading,
-        font-size: 1.5rem,
-        padding: nth($marg-pad-size, 2) nth($marg-pad-size, 3),
-    ),
-    text:
-    ( 
-        font-fam: $font-style-text,
-    ),
-    bold:
-    (
-        font-weight: bold,
-    )
-);
+
 @mixin text-style($type){
     $style: map-get($text-style, $type);
     font-family: map-get($style, font-fam);
@@ -37,11 +22,21 @@ $text-style: (
     padding: map-get($style, padding);
     font-weight: map-get($style, font-weight);
 }
+@mixin shadow($type){
+    $style: map-get($box-shadow, $type);
+    box-shadow: map-get($style, box-shadow);
+}
 @mixin btn 
 {
     color: white;
-    background: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
+    background: $btn-color;
     padding: nth($marg-pad-size, 6) nth($marg-pad-size, 3);
     border-radius: nth($marg-pad-size, 2);
     border: none;
+    @include shadow(darker);
+}
+@mixin btn-hover
+{
+    @include shadow(hover);
+    background: $btn-color-hover;
 }

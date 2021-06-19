@@ -1,7 +1,40 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$color-quaternary: #F2F2F2;
+$color-quaternary: #f6f6f6;
 $font-style-heading: 'Shrikhand', cursive;
 $font-style-text: 'Roboto', sans-serif;
+$btn-color: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
+$heart-color: linear-gradient(180deg, $color-primary 0%, $color-secondary 100%);
+$btn-color-hover: linear-gradient(180deg, darken($color-secondary, 15%) 0%, darken($color-primary, 15%) 100%);
 $marg-pad-size: 7px 20px 0 15px 5px 12px 40px;
+$text-style: (
+    heading:
+    (
+        font-fam: $font-style-heading,
+        font-size: 1.5rem,
+        padding: nth($marg-pad-size, 2) nth($marg-pad-size, 3),
+    ),
+    text:
+    ( 
+        font-fam: $font-style-text,
+    ),
+    bold:
+    (
+        font-weight: bold,
+    )
+);
+$box-shadow: (
+    lighter: 
+    (
+        box-shadow: 0 3px 6px 0 darken($color-quaternary, 15%),
+    ),
+    darker: 
+    (
+        box-shadow: 0 3px 9px 0 darken($color-quaternary, 35%),
+    ),
+    hover:
+    (
+        box-shadow: 0 6px 12px 0 darken($color-quaternary, 40%),
+    )
+);
