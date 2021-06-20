@@ -46,12 +46,18 @@
     }
     &__form
     {
+        & label
+        {
+            height: 75px;
+        }
         &__choice
         {
             background-color: white;
             margin: nth($marg-pad-size, 4) nth($marg-pad-size, 3);
             padding: nth($marg-pad-size, 4);
             border-radius: nth($marg-pad-size, 4);
+            height: 100%;
+            position: relative;
             &__title
             {
                 margin-bottom: nth($marg-pad-size, 5);
@@ -60,14 +66,19 @@
             {
                 @include flex-center;
                 justify-content: space-between;
+                & > .prix
+                {
+                    width: 20px;
+                }
             }
             &__bold-child
             {
                 @include text-style(bold);
             }
         }
-        &__checkbox, .fa-check-circle
+        &__checkbox
         {
+
             display: none;
         }
     }   

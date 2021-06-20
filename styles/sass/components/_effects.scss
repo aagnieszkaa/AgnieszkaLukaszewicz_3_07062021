@@ -17,3 +17,49 @@
     transition: color 1s;
     font-weight: bold;
 }
+
+.fa-check-circle-father
+{
+    color: white;
+    background-color: $color-selection;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;   
+    width: 60px;
+    text-align: center;
+    font-size: 1.7em;
+    line-height: 65px;
+    height: 65px;
+    border-radius: 0 nth($marg-pad-size, 4) nth($marg-pad-size, 4) 0;
+    transform: scaleX(0); 
+    height: 100%;
+}
+.main__form__checkbox:checked
+{
+    & + .fa-check-circle-father
+    {
+        display: block;
+        transform-origin: right; 
+        transform: scaleX(1); 
+        transition: transform 250ms;
+        & > .fa-check-circle
+        {
+            transform: rotate(360deg);
+            transition: transform 1000ms;
+        }
+        & ~ .main__form__choice__subtitle > .prix
+        {
+            transform: translateX(-60px);
+            transition: transform 250ms;
+        }
+        & ~ .main__form__choice__subtitle > .main__form__choice__subtitle__description
+        {
+            width: 200px;
+            text-overflow: ellipsis; 
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+}
+
