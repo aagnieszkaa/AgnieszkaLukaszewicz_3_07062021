@@ -310,10 +310,39 @@ body {
   background: linear-gradient(180deg, #ff8de0 0%, #9e67e0 100%);
 }
 
-.fa-heart {
-  position: relative;
+@keyframes heart {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.3;
+    background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  50% {
+    opacity: 0.6;
+    background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  70% {
+    opacity: 0.8;
+    background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  100% {
+    opacity: 1;
+    background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
 }
-
 #heart:checked + .fa-heart,
 #heart1:checked + .fa-heart,
 #heart2:checked + .fa-heart,
@@ -322,11 +351,9 @@ body {
 #heart5:checked + .fa-heart,
 #heart6:checked + .fa-heart,
 #heart7:checked + .fa-heart {
-  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
-  background-clip: text;
-  color: transparent;
-  transition: color 1s;
-  font-weight: bold;
+  animation: heart 250ms linear;
+  animation-fill-mode: forwards;
+  transform-origin: bottom;
 }
 
 .fa-check-circle-father {
@@ -460,6 +487,7 @@ body {
 }
 .loader {
   animation: loading-spinner 3s;
+  transform-origin: top;
   animation-delay: 3s;
   animation-fill-mode: forwards;
   position: absolute;
