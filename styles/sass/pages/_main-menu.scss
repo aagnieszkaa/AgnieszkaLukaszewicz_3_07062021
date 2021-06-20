@@ -58,6 +58,7 @@
             border-radius: nth($marg-pad-size, 4);
             height: 100%;
             position: relative;
+            @include shadow(lighter);
             &__title
             {
                 margin-bottom: nth($marg-pad-size, 5);

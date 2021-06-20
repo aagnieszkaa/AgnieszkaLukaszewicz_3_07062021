@@ -39,3 +39,6 @@ $box-shadow: (
         box-shadow: 0 6px 12px 0 darken($color-quaternary, 40%),
     )
 );
+$num-blocks: 14;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $num-blocks;

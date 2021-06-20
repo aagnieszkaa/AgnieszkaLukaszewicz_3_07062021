@@ -92,6 +92,7 @@ body, input {
   border-radius: 15px;
   height: 100%;
   position: relative;
+  box-shadow: 0 3px 6px 0 #d0d0d0;
 }
 .main__form__choice__title {
   margin-bottom: 5px;
@@ -360,6 +361,63 @@ body, input {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+@keyframes apparition-prog {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.apparition {
+  transform: scaleY(0);
+  animation: apparition-prog 1000ms ease-in-out;
+  animation-fill-mode: forwards;
+  transform-origin: bottom;
+}
+.apparition--1 {
+  animation-delay: 71.4285714286ms;
+}
+.apparition--2 {
+  animation-delay: 142.8571428571ms;
+}
+.apparition--3 {
+  animation-delay: 214.2857142857ms;
+}
+.apparition--4 {
+  animation-delay: 285.7142857143ms;
+}
+.apparition--5 {
+  animation-delay: 357.1428571429ms;
+}
+.apparition--6 {
+  animation-delay: 428.5714285714ms;
+}
+.apparition--7 {
+  animation-delay: 500ms;
+}
+.apparition--8 {
+  animation-delay: 571.4285714286ms;
+}
+.apparition--9 {
+  animation-delay: 642.8571428571ms;
+}
+.apparition--10 {
+  animation-delay: 714.2857142857ms;
+}
+.apparition--11 {
+  animation-delay: 785.7142857143ms;
+}
+.apparition--12 {
+  animation-delay: 857.1428571429ms;
+}
+.apparition--13 {
+  animation-delay: 928.5714285714ms;
+}
+.apparition--14 {
+  animation-delay: 1000ms;
 }
 
 /*# sourceMappingURL=style.css.map */

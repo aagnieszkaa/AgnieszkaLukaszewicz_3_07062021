@@ -63,3 +63,29 @@
     }
 }
 
+
+
+
+@keyframes apparition-prog {
+    0% {
+        transform: scaleY(0);
+        
+    }
+    100% {
+
+        transform: scaleY(1);
+        
+    }
+}
+.apparition
+{
+    transform: scaleY(0);
+    animation: apparition-prog $anim-dur ease-in-out;
+    animation-fill-mode: forwards;
+    transform-origin: bottom;
+        @for $i from 1 through $num-blocks {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+             }
+        }
+}
