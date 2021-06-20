@@ -7,6 +7,10 @@ body, input {
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  position: relative;
+}
+
 * {
   box-sizing: inherit;
 }
@@ -418,6 +422,65 @@ body, input {
 }
 .apparition--14 {
   animation-delay: 1000ms;
+}
+
+@keyframes loading-spinner {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes hearts {
+  0% {
+    transform: translateX(0);
+    color: #9356DC;
+  }
+  20% {
+    transform: rotate(-50deg);
+    color: #df00a1;
+  }
+  40% {
+    transform: rotate(-100deg);
+    color: #6c27be;
+  }
+  60% {
+    transform: rotate(-180deg);
+    color: #ff2dc5;
+  }
+  80% {
+    transform: rotate(-250deg);
+    color: #481a7f;
+  }
+  100% {
+    transform: rotate(-360deg);
+    color: #df00a1;
+  }
+}
+.loader {
+  animation: loading-spinner 3s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+.loader i {
+  font-weight: bold;
+  color: #9356DC;
+  margin: 20px;
+  margin-top: 150px;
+  font-size: 5em;
+  animation: hearts 3s backwards infinite linear;
+  animation-direction: alternate;
 }
 
 /*# sourceMappingURL=style.css.map */

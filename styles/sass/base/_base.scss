@@ -7,6 +7,10 @@ body, input
 {
     @include text-style(text);
 }
+body
+{
+    position: relative;
+}
 *
 {
     box-sizing: inherit;

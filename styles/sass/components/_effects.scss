@@ -62,10 +62,6 @@
         }
     }
 }
-
-
-
-
 @keyframes apparition-prog {
     0% {
         transform: scaleY(0);
@@ -88,4 +84,74 @@
                 animation-delay: $anim-delay * $i;
              }
         }
+}
+
+
+@keyframes loading-spinner
+{
+    0% {
+        transform: scale(1);
+        
+    }
+
+    100% {
+
+        transform: scale(0);
+        
+    }
+}
+@keyframes hearts
+{
+    0% {
+        transform: translateX(0);
+        color: $color-primary;
+        
+    }
+    20% {
+        transform: rotate(-50deg);
+        color: darken($color-secondary, 30%);
+    }
+    40% {
+        transform: rotate(-100deg);
+        color: darken($color-primary, 15%);
+
+    }
+    60% {
+        transform: rotate(-180deg);
+        color: darken($color-secondary, 15%);
+    }
+    80% {
+        transform: rotate(-250deg);
+        color: darken($color-primary, 30%);
+    }
+    100% {
+
+        transform: rotate(-360deg);
+        color: darken($color-secondary, 30%);
+        
+    }
+}
+.loader
+{
+    animation: loading-spinner $anim2-dur;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    @include flex-center;
+    align-items: flex-start;
+    & i
+    {
+        font-weight: bold;
+        color: $color-primary;
+        margin: 20px;
+        margin-top: 150px;
+        font-size: 5em;
+        animation: hearts $anim2-dur backwards infinite linear;
+        animation-direction: alternate;
+    }
 }
