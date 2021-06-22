@@ -6,10 +6,27 @@
         {
             padding: nth($marg-pad-size, 4);
             width: 150px;
+            @include tablette_and_desktop
+            {
+                width: 300px;
+            }
+        }
+        & ul 
+        {
+            @include desktop
+            {
+            @include flex-center;
+            justify-content: space-around;
+            }
+            
         }
         &__li
         {
             padding: nth($marg-pad-size, 5) nth($marg-pad-size, 4);
+            @include tablette_and_desktop
+            {
+                font-size: 1.1em;
+            }
             &__link
             {
                 @include links(white);
@@ -19,4 +36,10 @@
                 }
             }
         }
+        @include tablette_and_desktop
+        {
+            @include flex-center;
+            justify-content: space-evenly;
+        }
+        
     }

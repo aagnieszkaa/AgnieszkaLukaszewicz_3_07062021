@@ -2,6 +2,7 @@
     {
         &__section1
         {
+           
             &__form
             {
                 background-color: darken($color-quaternary, 5%);
@@ -10,6 +11,7 @@
                 align-items: baseline;
                 border-top: 5px solid transparent;
                 border-image: linear-gradient(#d2d2d2, darken($color-quaternary, 5%)) 60;
+                
                 &__icon
                 {
                     transform: translateX(34px);
@@ -21,7 +23,6 @@
                     background-color: darken($color-quaternary, 5%);
                     text-align: center;
                     font-size: 1em;
-                    
                 }
             }
             &__top
@@ -52,11 +53,19 @@
                 font-size: 1.5em;
                 @include text-style(bold);
                 margin: nth($marg-pad-size, 2) nth($marg-pad-size, 3) nth($marg-pad-size, 6) nth($marg-pad-size, 3);
+                @include tablette_and_desktop
+                {
+                    @include flex-center;
+                } 
             }
             &__div
             {
                 @include flex-center;
                 flex-direction: column;
+                @include desktop
+                {
+                    flex-direction: row;
+                }
                 &__link
                 {
                     display: block;
@@ -68,8 +77,17 @@
                     margin: 10px nth($marg-pad-size, 3);
                     border-radius: nth($marg-pad-size, 2);
                     position: relative;
+                    @include desktop
+                    {
+                        margin: 25px;
+                    }
                     @include shadow(lighter);
                     font-weight: 500;
+                    @include tablette
+                    {
+                        width: 500px;
+                    }
+                    
                     & p, &__icon, & div
                     {
                         margin: nth($marg-pad-size, 3) 10px;
@@ -88,10 +106,19 @@
                         color: darken($color-quaternary, 60%);
                         position: absolute;
                         left: 25px;
+                        @include tablette
+                        {
+                            left: 70px;
+                            font-size: 1.3em;
+                        }
                     }
-                    &__icon--violet
+                    &:active > &__icon
                     {
-                        color: $color-primary;
+                            color: $color-primary;
+                    }
+                    &:active
+                    {
+                        background-color: #f5edff;
                     }
                 }
             }
@@ -105,6 +132,20 @@
                 font-size: 1.5em;
                 @include text-style(bold);
                 padding: 40px 0 10px 20px;
+                @include tablette_and_desktop
+                {
+                    @include flex-center;
+                }
+            }
+            
+            &__card-container
+            {
+                @include tablette_and_desktop
+                {
+                @include flex-center;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                }
             }
             &__card
             {
@@ -116,6 +157,16 @@
                 background-color: white;
                 margin: 15px auto auto auto;
                 @include shadow(lighter);
+                @include tablette
+                {
+                    width: 40%;
+                    margin: 15px;
+                }
+                @include desktop
+                {
+                    width: 20%;
+                    height: 400px;
+                }
                 &__img-container
                 {
                     display: block;

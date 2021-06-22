@@ -8,37 +8,6 @@ $font-style-text: 'Roboto', sans-serif;
 $btn-color: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
 $heart-color: linear-gradient(180deg, $color-primary 0%, $color-secondary 100%);
 $btn-color-hover: linear-gradient(180deg, lighten($color-secondary, 4%) 0%, lighten($color-primary, 4%) 100%);
-$marg-pad-size: 7px 20px 0 15px 5px 12px 40px;
-$text-style: (
-    heading:
-    (
-        font-fam: $font-style-heading,
-        font-size: 1.5rem,
-        padding: nth($marg-pad-size, 2) nth($marg-pad-size, 3),
-    ),
-    text:
-    ( 
-        font-fam: $font-style-text,
-    ),
-    bold:
-    (
-        font-weight: bold,
-    )
-);
-$box-shadow: (
-    lighter: 
-    (
-        box-shadow: 0 3px 6px 0 darken($color-quaternary, 15%),
-    ),
-    darker: 
-    (
-        box-shadow: 0 3px 9px 0 darken($color-quaternary, 35%),
-    ),
-    hover:
-    (
-        box-shadow: 0 6px 12px 0 darken($color-quaternary, 40%),
-    )
-);
 $num-blocks: 14;
 $anim-dur: 1000ms;
 $anim-delay: $anim-dur / $num-blocks;

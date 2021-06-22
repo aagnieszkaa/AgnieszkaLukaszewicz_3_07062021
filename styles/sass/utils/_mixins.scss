@@ -9,12 +9,6 @@
     color: $color;
     text-decoration: none;
 }
-@mixin images
-{
-    object-fit: cover;
-    width: 100%;
-}
-
 @mixin text-style($type){
     $style: map-get($text-style, $type);
     font-family: map-get($style, font-fam);
@@ -39,4 +33,34 @@
 {
     @include shadow(hover);
     background: $btn-color-hover;
+}
+@mixin tablette_and_desktop
+{
+    @media screen and (min-width: 577px)
+    {
+        @content;
+    }
+}
+@mixin tablette
+{
+    @media screen and (min-width: 577px) and (max-width: 992px)
+    {
+        @content;
+    }
+}
+@mixin desktop
+{
+    @media screen and (min-width: 993px)
+    {
+        @content;
+    }
+}
+@mixin images
+{
+    object-fit: cover;
+    width: 100%;
+    @include tablette_and_desktop
+    {
+        height: 100%;
+    }
 }

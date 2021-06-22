@@ -1,0 +1,96 @@
+@keyframes heart
+{
+    0% {
+        opacity: 1;
+        
+    }
+    20% {
+        opacity: 0.3;
+        background: $heart-color;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-weight: bold;
+    }
+    50% {
+        opacity: 0.6;
+        background: $heart-color;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-weight: bold;
+    }
+    70% {
+        opacity: 0.8;
+        background: $heart-color;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-weight: bold;
+    }
+    100% {
+
+        opacity: 1;
+        background: $heart-color;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-weight: bold;
+        
+    }
+}
+@keyframes apparition-prog {
+    0% {
+        transform: scaleY(0);
+        
+    }
+    100% {
+
+        transform: scaleY(1);
+        
+    }
+}
+@keyframes loading-spinner
+{
+    0% {
+        transform: scale(1);
+        
+    }
+
+    100% {
+
+        transform: scale(0);
+        
+    }
+}
+@keyframes hearts
+{
+    0% {
+        transform: translateX(0);
+        color: $color-primary;
+        
+    }
+    20% {
+        transform: rotate(-50deg);
+        color: darken($color-secondary, 30%);
+    }
+    40% {
+        transform: rotate(-100deg);
+        color: darken($color-primary, 15%);
+
+    }
+    60% {
+        transform: rotate(-180deg);
+        color: darken($color-secondary, 15%);
+    }
+    80% {
+        transform: rotate(-250deg);
+        color: darken($color-primary, 30%);
+    }
+    100% {
+
+        transform: rotate(-360deg);
+        color: darken($color-secondary, 30%);
+        
+    }
+}
