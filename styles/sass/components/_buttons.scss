@@ -6,7 +6,7 @@
     margin-top: nth($marg-pad-size, 7);
     @include btn;
     width: 150px;
-    &:active
+    @include hover_active
         {
             @include btn-hover;
         }
@@ -22,7 +22,7 @@
             display: block;
             @include btn;
             width: 200px;
-            &:active
+            @include hover_active
             {
                 @include btn-hover;
             }

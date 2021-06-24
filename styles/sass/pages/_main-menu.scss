@@ -5,6 +5,10 @@
     {
         height: 240px;
         overflow: hidden;
+        @include tablette_and_desktop
+        {
+            height: 400px;
+        }
         &__image
     {
         @include images;
@@ -12,7 +16,12 @@
         {
 
             transform: translateY(-95px);
+            @include tablette_and_desktop
+            {
+                transform: translateY(0);
+            }
         }
+        
     }
     
     }
@@ -79,8 +88,16 @@
         }
         &__checkbox
         {
-
             display: none;
+            & ~ .main__form__choice__subtitle > .main__form__choice__subtitle__description
+            {
+                width: 220px;
+                padding: 2px;
+                @include tablette_and_desktop
+                        {
+                            width: 400px;
+                        }
+            }
         }
     }   
 }

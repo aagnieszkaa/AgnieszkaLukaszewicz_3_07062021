@@ -1,3 +1,18 @@
+@mixin hover_active 
+{
+    @media screen and (max-width: 993px)
+    {
+        &:active {
+            @content
+        }
+    };
+    @include desktop
+    {
+        &:hover {
+            @content
+        }
+    };
+}
 @mixin flex-center
 {
     display: flex;
@@ -29,6 +44,7 @@
     border: none;
     @include shadow(darker);
 }
+
 @mixin btn-hover
 {
     @include shadow(hover);
@@ -63,4 +79,24 @@
     {
         height: 100%;
     }
+}
+@mixin heart_animation
+{
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+}
+@mixin hover_check 
+{
+    @media screen and (max-width: 993px)
+    {
+        &:checked {
+            @content
+        }
+    };
+    @include desktop
+    {
+        &:hover {
+            @content
+        }
+    };
 }

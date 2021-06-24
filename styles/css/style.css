@@ -1,3 +1,95 @@
+@media screen and (max-width: 993px) {
+  .main--accueil__section2__div__link:active > .main--accueil__section2__div__link__icon {
+    color: #9356DC;
+  }
+}
+@media screen and (min-width: 993px) {
+  .main--accueil__section2__div__link:hover > .main--accueil__section2__div__link__icon {
+    color: #9356DC;
+  }
+}
+@media screen and (max-width: 993px) {
+  #heart1:checked + .fa-heart {
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+  }
+
+  #heart2:checked + .fa-heart {
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+  }
+
+  #heart3:checked + .fa-heart {
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+  }
+
+  #heart4:checked + .fa-heart {
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+  }
+
+  #heart5:checked + .fa-heart {
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+  }
+
+  #heart6:checked + .fa-heart {
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+  }
+
+  #heart7:checked + .fa-heart {
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+  }
+
+  #heart8:checked + .fa-heart {
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+  }
+}
+@media screen and (min-width: 993px) {
+  #heart1:hover + .fa-heart {
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+  }
+
+  #heart2:hover + .fa-heart {
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+  }
+
+  #heart3:hover + .fa-heart {
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+  }
+
+  #heart4:hover + .fa-heart {
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+  }
+
+  #heart5:hover + .fa-heart {
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+  }
+
+  #heart6:hover + .fa-heart {
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+  }
+
+  #heart7:hover + .fa-heart {
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+  }
+
+  #heart8:hover + .fa-heart {
+    animation: heart 250ms linear;
+    animation-fill-mode: forwards;
+  }
+}
 @keyframes heart {
   0% {
     opacity: 1;
@@ -158,6 +250,11 @@ body {
   height: 240px;
   overflow: hidden;
 }
+@media screen and (min-width: 577px) {
+  .main__img-container {
+    height: 400px;
+  }
+}
 .main__img-container__image {
   object-fit: cover;
   width: 100%;
@@ -169,6 +266,11 @@ body {
 }
 .main__img-container__image--note-enchantee {
   transform: translateY(-95px);
+}
+@media screen and (min-width: 577px) {
+  .main__img-container__image--note-enchantee {
+    transform: translateY(0);
+  }
 }
 .main__section {
   background-color: #f6f6f6;
@@ -225,6 +327,15 @@ body {
 }
 .main__form__checkbox {
   display: none;
+}
+.main__form__checkbox ~ .main__form__choice__subtitle > .main__form__choice__subtitle__description {
+  width: 220px;
+  padding: 2px;
+}
+@media screen and (min-width: 577px) {
+  .main__form__checkbox ~ .main__form__choice__subtitle > .main__form__choice__subtitle__description {
+    width: 400px;
+  }
 }
 
 .main--accueil__section1__form {
@@ -342,8 +453,15 @@ body {
 .main--accueil__section2__div__link:active > .main--accueil__section2__div__link__icon {
   color: #9356DC;
 }
-.main--accueil__section2__div__link:active {
-  background-color: #f5edff;
+@media screen and (max-width: 993px) {
+  .main--accueil__section2__div__link:active {
+    background-color: #f5edff;
+  }
+}
+@media screen and (min-width: 993px) {
+  .main--accueil__section2__div__link:hover {
+    background-color: #f5edff;
+  }
 }
 .main--accueil__section3 {
   background-color: #f6f6f6;
@@ -459,9 +577,17 @@ body {
   box-shadow: 0 3px 9px 0 #9d9d9d;
   width: 150px;
 }
-.main__form__btn:active {
-  box-shadow: 0 6px 12px 0 #909090;
-  background: linear-gradient(180deg, #ff8de0 0%, #9e67e0 100%);
+@media screen and (max-width: 993px) {
+  .main__form__btn:active {
+    box-shadow: 0 6px 12px 0 #909090;
+    background: linear-gradient(180deg, #ff8de0 0%, #9e67e0 100%);
+  }
+}
+@media screen and (min-width: 993px) {
+  .main__form__btn:hover {
+    box-shadow: 0 6px 12px 0 #909090;
+    background: linear-gradient(180deg, #ff8de0 0%, #9e67e0 100%);
+  }
 }
 
 .main--accueil__section1__top__btn {
@@ -479,93 +605,19 @@ body {
   box-shadow: 0 3px 9px 0 #9d9d9d;
   width: 200px;
 }
-.main--accueil__section1__top__btn__link:active {
-  box-shadow: 0 6px 12px 0 #909090;
-  background: linear-gradient(180deg, #ff8de0 0%, #9e67e0 100%);
-}
-
 @media screen and (max-width: 993px) {
-  #heart1:checked + .fa-heart {
-    animation: heart 250ms linear;
-    animation-fill-mode: forwards;
-  }
-
-  #heart2:checked + .fa-heart {
-    animation: heart 250ms linear;
-    animation-fill-mode: forwards;
-  }
-
-  #heart3:checked + .fa-heart {
-    animation: heart 250ms linear;
-    animation-fill-mode: forwards;
-  }
-
-  #heart4:checked + .fa-heart {
-    animation: heart 250ms linear;
-    animation-fill-mode: forwards;
-  }
-
-  #heart5:checked + .fa-heart {
-    animation: heart 250ms linear;
-    animation-fill-mode: forwards;
-  }
-
-  #heart6:checked + .fa-heart {
-    animation: heart 250ms linear;
-    animation-fill-mode: forwards;
-  }
-
-  #heart7:checked + .fa-heart {
-    animation: heart 250ms linear;
-    animation-fill-mode: forwards;
-  }
-
-  #heart8:checked + .fa-heart {
-    animation: heart 250ms linear;
-    animation-fill-mode: forwards;
+  .main--accueil__section1__top__btn__link:active {
+    box-shadow: 0 6px 12px 0 #909090;
+    background: linear-gradient(180deg, #ff8de0 0%, #9e67e0 100%);
   }
 }
 @media screen and (min-width: 993px) {
-  #heart1:hover + .fa-heart {
-    animation: heart 250ms linear;
-    animation-fill-mode: forwards;
-  }
-
-  #heart2:hover + .fa-heart {
-    animation: heart 250ms linear;
-    animation-fill-mode: forwards;
-  }
-
-  #heart3:hover + .fa-heart {
-    animation: heart 250ms linear;
-    animation-fill-mode: forwards;
-  }
-
-  #heart4:hover + .fa-heart {
-    animation: heart 250ms linear;
-    animation-fill-mode: forwards;
-  }
-
-  #heart5:hover + .fa-heart {
-    animation: heart 250ms linear;
-    animation-fill-mode: forwards;
-  }
-
-  #heart6:hover + .fa-heart {
-    animation: heart 250ms linear;
-    animation-fill-mode: forwards;
-  }
-
-  #heart7:hover + .fa-heart {
-    animation: heart 250ms linear;
-    animation-fill-mode: forwards;
-  }
-
-  #heart8:hover + .fa-heart {
-    animation: heart 250ms linear;
-    animation-fill-mode: forwards;
+  .main--accueil__section1__top__btn__link:hover {
+    box-shadow: 0 6px 12px 0 #909090;
+    background: linear-gradient(180deg, #ff8de0 0%, #9e67e0 100%);
   }
 }
+
 .fa-check-circle-father {
   color: white;
   background-color: #8edec9;
@@ -583,25 +635,47 @@ body {
   height: 100%;
 }
 
-.main__form__checkbox:checked + .fa-check-circle-father {
-  display: block;
-  transform-origin: right;
-  transform: scaleX(1);
-  transition: transform 250ms;
+@media screen and (max-width: 993px) {
+  .main__form__checkbox:checked + .fa-check-circle-father {
+    display: block;
+    transform-origin: right;
+    transform: scaleX(1);
+    transition: transform 250ms;
+  }
+  .main__form__checkbox:checked + .fa-check-circle-father > .fa-check-circle {
+    transform: rotate(360deg);
+    transition: transform 1000ms;
+  }
+  .main__form__checkbox:checked + .fa-check-circle-father ~ .main__form__choice__subtitle > .prix {
+    transform: translateX(-60px);
+    transition: transform 250ms;
+  }
+  .main__form__checkbox:checked + .fa-check-circle-father ~ .main__form__choice__subtitle > .main__form__choice__subtitle__description {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 }
-.main__form__checkbox:checked + .fa-check-circle-father > .fa-check-circle {
-  transform: rotate(360deg);
-  transition: transform 1000ms;
-}
-.main__form__checkbox:checked + .fa-check-circle-father ~ .main__form__choice__subtitle > .prix {
-  transform: translateX(-60px);
-  transition: transform 250ms;
-}
-.main__form__checkbox:checked + .fa-check-circle-father ~ .main__form__choice__subtitle > .main__form__choice__subtitle__description {
-  width: 200px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+@media screen and (min-width: 993px) {
+  .main__form__checkbox:hover + .fa-check-circle-father {
+    display: block;
+    transform-origin: right;
+    transform: scaleX(1);
+    transition: transform 250ms;
+  }
+  .main__form__checkbox:hover + .fa-check-circle-father > .fa-check-circle {
+    transform: rotate(360deg);
+    transition: transform 1000ms;
+  }
+  .main__form__checkbox:hover + .fa-check-circle-father ~ .main__form__choice__subtitle > .prix {
+    transform: translateX(-60px);
+    transition: transform 250ms;
+  }
+  .main__form__checkbox:hover + .fa-check-circle-father ~ .main__form__choice__subtitle > .main__form__choice__subtitle__description {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 }
 
 .apparition {

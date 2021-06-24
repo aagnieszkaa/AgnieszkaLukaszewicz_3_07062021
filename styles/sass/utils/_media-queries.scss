@@ -1,0 +1,31 @@
+@media screen and (max-width: 993px)
+{
+    .main--accueil__section2__div__link:active > .main--accueil__section2__div__link__icon
+    {
+        color: $color-primary;
+    } 
+}
+@media screen and (min-width: 993px)
+{
+   
+    .main--accueil__section2__div__link:hover > .main--accueil__section2__div__link__icon
+    {
+        color: $color-primary;
+    }
+}
+@media screen and (max-width: 993px)
+    {
+        @for $i from 1 through 8 {
+            #heart#{$i}:checked + .fa-heart {
+                @include heart_animation;
+            }
+        }
+    }
+    @media screen and (min-width: 993px)
+    {
+        @for $i from 1 through 8 {
+            #heart#{$i}:hover + .fa-heart {
+               @include heart_animation;
+            }
+        }
+    }

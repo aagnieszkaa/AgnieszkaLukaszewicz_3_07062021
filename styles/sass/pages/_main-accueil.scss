@@ -116,13 +116,14 @@
                     {
                             color: $color-primary;
                     }
-                    &:active
+                    @include hover_active
                     {
                         background-color: #f5edff;
                     }
                 }
             }
         }
+
         &__section3
         {
             background-color: $color-quaternary;
