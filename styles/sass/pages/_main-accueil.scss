@@ -1,8 +1,7 @@
 .main--accueil
     {
         &__section1
-        {
-           
+        { 
             &__form
             {
                 background-color: darken($color-quaternary, 5%);
@@ -123,7 +122,6 @@
                 }
             }
         }
-
         &__section3
         {
             background-color: $color-quaternary;
@@ -138,7 +136,6 @@
                     @include flex-center;
                 }
             }
-            
             &__card-container
             {
                 @include tablette_and_desktop

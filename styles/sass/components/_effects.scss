@@ -16,7 +16,6 @@
     transform: scaleX(0); 
     height: 100%;
 }
-
 .main__form__checkbox
 {
     @include hover_check{
@@ -38,7 +37,6 @@
             }
             & ~ .main__form__choice__subtitle > .main__form__choice__subtitle__description
             {
-                
                 text-overflow: ellipsis; 
                 overflow: hidden;
                 white-space: nowrap;
@@ -47,7 +45,6 @@
     }
    
 }
-
 .apparition
 {
     transform: scaleY(0);

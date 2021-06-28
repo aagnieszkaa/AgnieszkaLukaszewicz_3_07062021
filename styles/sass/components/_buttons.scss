@@ -1,6 +1,5 @@
 .main__form__btn
 {
-
     display: block;
     margin: auto;
     margin-top: nth($marg-pad-size, 7);
@@ -26,7 +25,6 @@
             {
                 @include btn-hover;
             }
-        }
-        
+        }  
     }
 }
