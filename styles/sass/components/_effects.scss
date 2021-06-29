@@ -18,7 +18,7 @@
 }
 .main__form__checkbox
 {
-    @include hover_check{
+    @include hover_check {
         & + .fa-check-circle-father
         {
             display: block;
