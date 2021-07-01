@@ -56,10 +56,9 @@
 }
 .apparition
 {
-    transform: scaleY(0);
+    opacity: 1;
     animation: apparition-prog $anim-dur ease-in-out;
     animation-fill-mode: forwards;
-    transform-origin: bottom;
         @for $i from 1 through $num-blocks {
             &--#{$i} {
                 animation-delay: $anim-delay * $i;
